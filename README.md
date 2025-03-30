@@ -1,13 +1,13 @@
-# ❗CSC226 Final Project
+# CSC226 Final Project
 
 ## Instructions
 
-❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
-  they accompany. (This means that your final README should have no ❗️in it!)
+Exclamation Marks indicate action items; you should remove these emoji as you complete/update the items which 
+  they accompany. (This means that your final README should have no in it!)
 
-❗️**Author(s)**: Your name(s) here
+**Author(s)**: Liz Miller, Constance Falucskai
 
-❗️**Google Doc Link**: Your link here
+**Google Doc Link**: https://docs.google.com/document/d/1TbY8JwkY_fl_8dB8yIcMxdrz9eAKpXXlc6GNTB4kpN8/edit?tab=t.0
 
 ---
 
@@ -36,7 +36,7 @@ branch) as they work. When you need to bring each others branches together, do s
 into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
 
 ```
-    Branch 1 starting name: _____________
+    Branch 1 starting name: lizardlair_millere4
     Branch 2 starting name: _____________
 ```
 
