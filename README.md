@@ -7,7 +7,7 @@
 
 Author(s): Liz Miller & Constance Falucskai
 
-Google Doc Link:  https://docs.google.com/document/d/1TbY8JwkY_fl_8dB8yIcMxdrz9eAKpXXlc6GNTB4kpN8/edit?tab=t.0#heading=h.qg98s23ap4mh
+Google Doc Link: https://docs.google.com/document/d/1TbY8JwkY_fl_8dB8yIcMxdrz9eAKpXXlc6GNTB4kpN8/edit?tab=t.0#heading=h.qg98s23ap4mh
 
 ---
 
@@ -23,19 +23,19 @@ Source Assignment(s): `T10:Intro to Classes, T12:Events and GUIs, HW11:Top Down 
 
 CRC Card(s):
 
-(image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[Don't leave me in your README!](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-(image/mRNA_seq_CRC.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[Don't leave me in your README!](image/mRNA_seq_CRC.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-(image/translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[Don't leave me in your README!](image/translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-(image/user_interface_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[Don't leave me in your README!](image/user_interface_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-Branches: 
+Branches:
 
 ```
     Branch 1 starting name: skaiWalker_P01_wLizard
-    Branch 2 starting name: Lizard_P01
+    Branch 2 starting name: lizardlair_P01
 ```
 
 ### References 
