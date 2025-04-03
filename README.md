@@ -23,13 +23,13 @@ Source Assignment(s): `T10:Intro to Classes, T12:Events and GUIs, HW11:Top Down 
 
 CRC Card(s):
 
-[Don't leave me in your README!](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[condon_chart](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-[Don't leave me in your README!](image/mRNA_seq_CRC.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[mRNA_seq](image/mRNA_seq_CRC.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-[Don't leave me in your README!](image/translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[translator](image/translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-[Don't leave me in your README!](image/user_interface_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[user_interface](image/user_interface_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
 Branches:
 
