@@ -15,6 +15,7 @@
 #Tkinter Scrolled Text- https://www.pythontutorial.net/tkinter/tkinter-scrolledtext/
 #Tkinter dialogs- https://docs.python.org/3/library/dialog.html
 #Tkinter MessageBox- https://www.tutorialspoint.com/python/tk_messagebox
+#Tkinter-mainloop- https://stackoverflow.com/questions/29158220/tkinter-understanding-mainloop
 ####################################################################################
 #
 #---Notes---#
@@ -215,17 +216,17 @@ class Translator:
 
     def reset(self):
         """Reset all fields"""
-        self.input_box.delete("1.0", tk.END)
-        self.output_box.configure(state='normal')
-        self.output_box.delete("1.0", tk.END)
-        self.output_box.configure(state='disabled')
-        self.output_seq.set("")
-        self.frame_var.set(1)
-        self.translation_mode.set("mRNA → Protein")
+        self.input_box.delete("1.0", tk.END) #delete from the first character of the first line
+        self.output_box.configure(state='normal') #temporarily removed ready only restrictions so the program can change the output box contents
+        self.output_box.delete("1.0", tk.END) #delete all they way to the end of the box
+        self.output_box.configure(state='disabled') #reengages normal read only output state for output box
+        self.output_seq.set("") #string variable used to store text for output
+        self.frame_var.set(1) #resets frame radio button back to frame 1 default
+        self.translation_mode.set("mRNA → Protein") #resets translation mode back to MRNA to Protein default
 
 def main():
-    app = Translator()
-    app.root.mainloop()
+    app = Translator() #builds the GUI
+    app.root.mainloop() #starts the event loop for the apps main window. It continuously listens for events like button clicks, window resizing etc. This is what makes the GUI actually appear and stay open
 
 if __name__ == "__main__":
     main()
