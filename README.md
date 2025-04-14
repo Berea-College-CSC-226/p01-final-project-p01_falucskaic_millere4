@@ -57,7 +57,8 @@ Reflect on what you’ve done so far. How’s it going? Are you feeling behind/a
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    Its a little overwhelming, but I am surprised at how smooth its going. Its just the little things, like reading and
+     appending from files correctly. getting the resut I want
 ```
 
 ---
