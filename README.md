@@ -22,12 +22,12 @@ Exclamation Marks indicate action items; you should remove these emoji as you co
 **CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
   - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
-    [CRC Card Example](https://docs.google.com/document/d/13lsCsR4NZNcCSsrWVoBhveH_vlT9Pl7Y6rlqd7XStw4/edit?usp=sharing)
+    [Translator_crc.png](https://docs.google.com/document/d/13lsCsR4NZNcCSsrWVoBhveH_vlT9Pl7Y6rlqd7XStw4/edit?usp=sharing)
   - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the 
     README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
     and REPLACE it with your own:
-  
-![Don't leave me in your README!](image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+
+![Translator_crc.png](image/Translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one.")
 
 **Branches**: This project will **require** effective use of git. 
 
