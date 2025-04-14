@@ -5,7 +5,7 @@
 Exclamation Marks indicate action items; you should remove these emoji as you complete/update the items which 
   they accompany. (This means that your final README should have no in it!)
 
-**Author(s)**: Liz Miller, Constance Falucskai
+**Author(s)**: Liz Miller & Constance Falucskai
 
 **Google Doc Link**: https://docs.google.com/document/d/1TbY8JwkY_fl_8dB8yIcMxdrz9eAKpXXlc6GNTB4kpN8/edit?tab=t.0
 
@@ -13,31 +13,30 @@ Exclamation Marks indicate action items; you should remove these emoji as you co
 
 ## Milestone 1: Setup, Planning, Design
 
-**Title**: `What is the title of your project? Be creative! Replace this block of text.`
+Title: `Condon!We're the Protien!`
+
+Purpose: `Translate user entered mRNA sequences to the amino acide sequence corrolate to the tri-nucleic codon.`
 
 **Purpose**: `In a single sentence, describe WHAT your project will do. Replace this block of text.`
 
-**Source Assignment(s)**: `List which original assignments you will base your project on? Replace this block of text.`
+Source Assignment(s): `T10:Intro to Classes, T12:Events and GUIs, HW11:Top Down Design, HW10: Ciphers, HW09:UPC Barcodes,
+                       HW08: It's in your Genes, <Reading Assgnmnts>Chapter 6: Functions , Chapter 5: Modules, 
+                        Chapter 9: Strings, Chapter 10: Lists, Chapt 11: Files, Chapter 12: Dictionaries, `
 
 **CRC Card(s)**:
-  - Create a CRC card for each class that your project will implement.
-  - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
-    [Translator_crc.png](https://docs.google.com/document/d/13lsCsR4NZNcCSsrWVoBhveH_vlT9Pl7Y6rlqd7XStw4/edit?usp=sharing)
-  - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the 
-    README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
-    and REPLACE it with your own:
-
 ![Translator_crc.png](image/Translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one.")
+[condon_chart](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[mRNA_seq](image/mRNA_seq_CRC.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[translator](image/translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[user_interface](image/user_interface_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-**Branches**: This project will **require** effective use of git. 
 
-Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
-branch) as they work. When you need to bring each others branches together, do so by merging each other's branches 
-into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
+**Branches**: 
+
 
 ```
-    Branch 1 starting name: lizardlair_millere4
-    Branch 2 starting name: _____________
+    Branch 1 starting name: skaiWalker_P01_wLizard
+    Branch 2 starting name: lizardlair_millere4
 ```
 
 ### References 
