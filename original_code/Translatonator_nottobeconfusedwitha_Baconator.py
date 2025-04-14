@@ -186,13 +186,32 @@ class Translator:
         tk.Button(button_frame, text="Download Output", command=self.download_output).grid(row=0, column=3, padx=5)
 
     def upload_fasta(selfself):
+        """Will handle FASTA file upload"""
         messagebox.showinfo("FASTA Upload", "Need to configure")
+        #TODO: configure
 
     def translate(selfself):
+        """Will handle translation, depending on user selected mode"""
         messagebox.showinfo("Translate", "Need to configure translation logic")
+        #TODO: configure
+########################################################################################################################
 
-    def download_output(selfself):
-        messagebox.showinfo("Download", "Download functionality coming soon")
+#Probably going to look more like this:
+
+    #def mRNA_to_protein(self, seq):
+#       """Will handle translation of mRNA to protein with frame selection"""
+#   TODO: configure mRNA to protein translation
+
+#   def protein_to_mRNA(self, seq):
+#       """Will handle Reverse translation"""
+#   TODO: configure reverse protein to possible codons
+
+#TODO: this will result in a listing of possible codons, does not give a 100% answer, we need to decide which direction we want to go and how deep.
+########################################################################################################################
+
+    def download_output(self, seq):
+        """Save translation results to file"""
+        messagebox.showinfo("Download Output", "Download functionality coming soon.")
 
     def reset(self):
         """Reset all fields"""
@@ -207,7 +226,6 @@ class Translator:
 def main():
     app = Translator()
     app.root.mainloop()
-
 
 if __name__ == "__main__":
     main()
