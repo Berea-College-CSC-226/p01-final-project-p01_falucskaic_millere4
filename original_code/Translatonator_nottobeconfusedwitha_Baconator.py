@@ -85,7 +85,7 @@ class Translator:
 
         # ---Variables---#
         self.input_seq = tk.StringVar() #for storing input
-        self.output_seq = tk.StringVar() #for sotring output
+        self.output_seq = tk.StringVar() #for sorting output
         self.color_mode = tk.StringVar(value="Light Mode") #set default color mode
         self.translation_mode = tk.StringVar(value="mRNA → Protein") #set default translation direction
         self.frame_var = tk.IntVar(value=1)  # set default reading frame
@@ -143,7 +143,7 @@ class Translator:
     def setup_input_section(self):
         """Set up input sequence section"""
         frame = tk.LabelFrame(self.root, text="Input Sequence", padx=5, pady=5) #Create labeled frame
-        frame.grid(row=2, column=0, columnspan=3, padx=10, pady=5, sticky="nsew") #place labeled frame
+        frame.grid(row=2, column=0, columnspan=3, padx=10, pady=5, sticky="nsew") #place labeled frame- nsew= widget stuck to all four sides(N,S,E,W)
         frame.grid_columnconfigure(0, weight=1) #text box expandable
 
         self.input_box = scrolledtext.ScrolledText(frame, height=10, width=80) #scrollable text box for inout
@@ -187,13 +187,29 @@ class Translator:
         tk.Button(button_frame, text="Download Output", command=self.download_output).grid(row=0, column=3, padx=5)
 
     def upload_fasta(selfself):
-        """Will handle FASTA file upload"""
-        messagebox.showinfo("FASTA Upload", "Need to configure")
-        #TODO: configure
+        """Handle FASTA file upload"""
+        file_path = filedialog.askopenfilename(filetypes=[("FASTA files", "*.fasta *.fa *.txt")])
+        if file_path:
+            try:
+                with open(file_path, "r") as file:
+                    seq = ""
+                    for line in file:
+                        if not line.startswith(">"):
+                            seq += line.strip().upper()
+                    self.input_box.delete("1.0", tk.END)
+                    self.input_box.insert(tk.END, seq)
+            except Exception as e:
+                messagebox.showerror("Error", f"Could not read file: {str(e)}")
 
     def translate(selfself):
-        """Will handle translation, depending on user selected mode"""
-        messagebox.showinfo("Translate", "Need to configure translation logic")
+        """Handle translation based on selected mode"""
+        raw_seq = self.input_box.get("1.0", tk.END).strip().upper() #gets input sequence from text box, strips whitespace, and converts to uppercase
+        mode = self.translation_mode.get() #checks translation
+
+        if not raw_seq:
+            messagebox.showwarning("Warning", "Please enter a sequence to translate")
+            return
+
         #TODO: configure
 ########################################################################################################################
 
