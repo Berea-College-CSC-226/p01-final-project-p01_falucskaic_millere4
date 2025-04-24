@@ -66,9 +66,17 @@ mrna_codon_table = {
 ########################################################################################################################
 
 # --- Reverse Table: Protein → Codons ---
-reverse_mrna_table = {}
+reverse_mrna_table = {}     #creates and empty list with no keys
 for codon, aa in mrna_codon_table.items():
-    reverse_mrna_table.setdefault(aa, []).append(codon)
+    reverse_mrna_table.setdefault(aa, []).append(codon) #looks up the hash table to see if there is an entry called "fruits." If it fins no entry for "fruits"
+    """setdefault() is a built in python dictionary method, It's neat. worked well here to take---
+        reverse_table = {}
+        for codon, aa in codon_table.items():
+            if aa not in reverse_table:
+                reverse_table[aa] = []
+            reverse_table[aa].append(codon)
+    ---from 4 lines to 2 and it helps avoid keyError because it also adds fruits with a default 
+    empty list"""
 ########################################################################################################################
 
 #---User interface---#
@@ -186,22 +194,22 @@ class Translator:
         tk.Button(button_frame, text="Reset", command=self.reset).grid(row=0, column=2, padx=5)
         tk.Button(button_frame, text="Download Output", command=self.download_output).grid(row=0, column=3, padx=5)
 
-    def upload_fasta(selfself):
+    def upload_fasta(self):
         """Handle FASTA file upload"""
-        file_path = filedialog.askopenfilename(filetypes=[("FASTA files", "*.fasta *.fa *.txt")])
-        if file_path:
+        file_path = filedialog.askopenfilename(filetypes=[("FASTA files", "*.fasta *.fa *.txt")]) #open file dialog so user cn select FASTA file
+        if file_path: #checks that user did select file
             try:
-                with open(file_path, "r") as file:
-                    seq = ""
-                    for line in file:
-                        if not line.startswith(">"):
-                            seq += line.strip().upper()
-                    self.input_box.delete("1.0", tk.END)
-                    self.input_box.insert(tk.END, seq)
-            except Exception as e:
+                with open(file_path, "r") as file: #opens file for reading
+                    seq = "" #creates empty string
+                    for line in file: #read file line by line
+                        if not line.startswith(">"): #skips fasta header line
+                            seq += line.strip().upper() #removes white space, converts to uppercase, and concatenates
+                    self.input_box.delete("1.0", tk.END) # clear old content in box
+                    self.input_box.insert(tk.END, seq) #add new content to box
+            except Exception as e: #handles errors
                 messagebox.showerror("Error", f"Could not read file: {str(e)}")
 
-    def translate(selfself):
+    def translate(self):
         """Handle translation based on selected mode"""
         raw_seq = self.input_box.get("1.0", tk.END).strip().upper() #gets input sequence from text box, strips whitespace, and converts to uppercase
         mode = self.translation_mode.get() #checks translation
@@ -210,26 +218,47 @@ class Translator:
             messagebox.showwarning("Warning", "Please enter a sequence to translate")
             return
 
-        #TODO: configure
-########################################################################################################################
+        def translate_to_protein(self, dna):
+            protein = ""
+            for i in range(0, len(dna) - 2, 3):
+                codon = dna[i:i + 3]
+                protein += mrna_codon_table.get(codon, '?')
+            return protein or "Invalid or empty DNA sequence."
 
-#Probably going to look more like this:
+        def translate_to_dna(self, protein):
+            dna_possibilities = []
+            for aa in protein:
+                codons = reverse_mrna_table.get(aa, ["???"])
+                dna_possibilities.append(f"{aa}: {', '.join(codons)}")
+            return "\n".join(dna_possibilities) or "Invalid or empty protein sequence."
 
-    #def mRNA_to_protein(self, seq):
-#       """Will handle translation of mRNA to protein with frame selection"""
-#   TODO: configure mRNA to protein translation
+        def translate(self):
+            """Had duplicate definitions and incorrect logic"""
 
-#   def protein_to_mRNA(self, seq):
-#       """Will handle Reverse translation"""
-#   TODO: configure reverse protein to possible codons
+        def mrna_to_protein(self, dna):  # Nested function (incorrect)
+                protein = ""
+            for i in range(0, len(dna) - 2, 3):2
+                    codon = dna[i:i + 3]
+                    protein += codon_table.get(codon, '?')  # Wrong variable name
+                return protein or "Invalid or empty DNA sequence."
 
-#TODO: this will result in a listing of possible codons, does not give a 100% answer, we need to decide which direction we want to go and how deep.
-########################################################################################################################
+            def protein_to_mrna(self, protein):  # Duplicate logic
+                dna_possibilities = []
+                for aa in protein:
+                    codons = reverse_mrna_table.get(aa, ["???"])
+                    dna_possibilities.append(f"{aa}: {', '.join(codons)}")
+                return "\n".join(dna_possibilities) or "Invalid or empty protein sequence."
 
-    def download_output(self, seq):
-        """Save translation results to file"""
-        messagebox.showinfo("Download Output", "Download functionality coming soon.")
+        def download_output(self):  # No parameter needed
+            """Save translation results to file"""
+            output = self.output_seq.get()
+            if not output:
+                messagebox.showwarning("Warning", "No output to download")
+                return
 
+            file_path = filedialog.asksaveasfilename(
+                defaultextension=".txt",
+                filetypes=[("Text files", "*.txt"), ("All files", "*.*")]
     def reset(self):
         """Reset all fields"""
         self.input_box.delete("1.0", tk.END) #delete from the first character of the first line
