@@ -13,7 +13,7 @@ Exclamation Marks indicate action items; you should remove these emoji as you co
 
 ## Milestone 1: Setup, Planning, Design
 
-Title: `Condon!We're the Protien!`
+Title: `Condon! We're the Protien!`
 
 Purpose: `Translate user entered mRNA sequences to the amino acide sequence corrolate to the tri-nucleic codon.`
 

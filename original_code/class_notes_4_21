@@ -1,0 +1,5 @@
+if methods have input parameters and a return value, it is probably testable
+mutator method- modify attributes- testable
+GUI stuff- not testable
+if packing into UI, can't really test it (set message makes an issue)
+

@@ -503,7 +503,7 @@ class DNADraw:
         :param y: y-coordinate of the mouse
         :return: None
         """
-
+ 
         self.draw_complement(x, y)           # Draw the complement strand
         self.current_base += 1
         if self.current_base <= self.max_bases:
