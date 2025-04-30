@@ -1,9 +1,9 @@
-# ❗CSC226 Final Project
+# CSC226 Final Project
 
 ## Instructions
 
-❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
-  they accompany. (This means that your final README should have no ❗️in it!)
+️Exclamation Marks indicate action items; you should remove these emoji as you complete/update the items which 
+  they accompany. (This means that your final README should have no  ️in it!)
 
 Author(s): Liz Miller & Constance Falucskai
 
