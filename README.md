@@ -23,7 +23,7 @@ Source Assignment(s): `T10:Intro to Classes, T12:Events and GUIs, HW11:Top Down 
 
 CRC Card(s):
 
-[condon_chart](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+[codon_chart](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
 [mRNA_seq](image/mRNA_seq_CRC.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
