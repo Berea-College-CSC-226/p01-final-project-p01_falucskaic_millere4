@@ -38,7 +38,7 @@
 Q=Gin=Glutamate, R=Arg=Arginine, I=Ile=Isoleucine, M=Met=Methionine(START), T=Thr=Threonine, N=Asn=Asparagine, 
 K=Lys=Lysine, V=Val=Valine, A=Ala=Alanine, D=Asp=Aspartic acid, E=Glu=Glutamic acid, G=Gly=Glycine"""
 
-condon_table = dict( F={'UUU', 'UUC'}, L={'UUA', 'UUG', 'CUU','CUC','CUA', 'CUG'},S={'UCU','UCC','UCA','UCG','AGU','AGC'},
+condon_table=dict( F={'UUU', 'UUC'}, L={'UUA', 'UUG', 'CUU','CUC','CUA', 'CUG'},S={'UCU','UCC','UCA','UCG','AGU','AGC'},
                      Y={'UAU','UAC'},C={'UGU','UGC'},W={'UGG'},P={'CCU','CCC','CCA','CCG'}, H={'CAU','CAC'},
                      Q={'CAA','CAG'},R={'CGU','CGC','CGA','CGG','AGA','AGG'}, I={'AUU','AUC','AUA'},M={'AUG'},
                      T={'ACU','ACC','ACA','ACG'}, N={'AUU','AAC'},K={'AAA','AAG'}, V={'GUU','GUC','GUA','GUG'},
