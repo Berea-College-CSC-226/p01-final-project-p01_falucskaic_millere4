@@ -2,12 +2,12 @@
 
 ## Instructions
 
-️Exclamation Marks indicate action items; you should remove these emoji as you complete/update the items which 
-  they accompany. (This means that your final README should have no  ️in it!)
+Exclamation Marks indicate action items; you should remove these emoji as you complete/update the items which 
+  they accompany. (This means that your final README should have no in it!)
 
-Author(s): Liz Miller & Constance Falucskai
+**Author(s)**: Liz Miller & Constance Falucskai
 
-Google Doc Link: https://docs.google.com/document/d/1TbY8JwkY_fl_8dB8yIcMxdrz9eAKpXXlc6GNTB4kpN8/edit?tab=t.0#heading=h.qg98s23ap4mh
+**Google Doc Link**: https://docs.google.com/document/d/1TbY8JwkY_fl_8dB8yIcMxdrz9eAKpXXlc6GNTB4kpN8/edit?tab=t.0
 
 ---
 
@@ -19,23 +19,26 @@ Purpose: `Translate user entered mRNA sequences to the amino acide sequence corr
 
 Source Assignment(s): `T10:Intro to Classes, T12:Events and GUIs, HW11:Top Down Design, HW10: Ciphers, HW09:UPC Barcodes,
                        HW08: It's in your Genes, <Reading Assgnmnts>Chapter 6: Functions , Chapter 5: Modules, 
-                        Chapter 9: Strings, Chapter 10: Lists, Chapter 11: Files, Chapter 12: Dictionaries, `
+                        Chapter 9: Strings, Chapter 10: Lists, Chapt 11: Files, Chapter 12: Dictionaries, `
 
+**CRC Card(s)**:
+![Translator_crc.png](image/Translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one.")
+[condon_chart](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 CRC Card(s):
 
 [codon_chart](image/codon_chart_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
 [mRNA_seq](image/mRNA_seq_CRC.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
-
 [translator](image/translator_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
-
 [user_interface](image/user_interface_crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-Branches:
+
+**Branches**: 
+
 
 ```
     Branch 1 starting name: skaiWalker_P01_wLizard
-    Branch 2 starting name: lizardlair_P01
+    Branch 2 starting name: lizardlair_millere4
 ```
 
 ### References 
@@ -55,7 +58,8 @@ Reflect on what you’ve done so far. How’s it going? Are you feeling behind/a
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    Its a little overwhelming, but I am surprised at how smooth its going. Its just the little things, like reading and
+     appending from files correctly. getting the resut I want
 ```
 
 ---
