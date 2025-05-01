@@ -252,7 +252,7 @@ class Translator:     #GUI application class
     def translate(self):
         """translation with error handling"""
         try:
-            raw_seq = self.clean_sequence(self.input_box.get("1.0", tk.END).strip().upper()) #gets input sequence from text box, strips whitespace, and converts to uppercase
+            raw_seq = self.clean_sequence(self.input_box.get("1.0", tk.END)) #gets input sequence from text box, strips whitespace
             if not raw_seq:
                 messagebox.showwarning("Warning", "No input provided.")
                 return
