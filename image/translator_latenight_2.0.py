@@ -122,7 +122,7 @@ class Translator:     #GUI application class
             "INSTRUCTIONS:\n"
             "1. Select translation direction (mRNA→Protein or Protein→mRNA)\n"
             "2. For mRNA→Protein: Select reading frame (1, 2, or 3)\n"
-            "3. Paste sequence or upload FASTA file\n"
+            "3. Paste sequence or upload FASTA file.\n *Manually remove FASTA title line. Include base pairs only*\n"
             "4. Click 'Translate' button\n"
             "5. Use 'Reset' to clear all fields, 'Download' to save results"
         )
@@ -164,7 +164,7 @@ class Translator:     #GUI application class
         input_frame.grid(row=2, column=0, columnspan=3, padx=10, pady=5, sticky="nsew") #place labeled frame- nsew= widget stuck to all four sides(N,S,E,W)
         input_frame.grid_columnconfigure(0, weight=1) #text box expandable
 
-        self.input_box.grid = scrolledtext.ScrolledText(input_frame, height=10, width=80) #scrollable text box for inout
+        self.input_box = scrolledtext.ScrolledText(input_frame, height=10, width=80) #scrollable text box for input
         self.input_box.grid(row=0, column=0, columnspan=2, sticky="nsew") #place input text box and fills entire frame
 
     def setup_output_section(self):
@@ -189,7 +189,7 @@ class Translator:     #GUI application class
         frame_frame = tk.Frame(self.root) #create container frame
         frame_frame.grid(row=4, column=1, padx=10, pady=5, sticky="e") #place it, right align
 
-        tk.Label(frame, text="Reading Frame:").grid(row=0, column=0, padx=5) #add label
+        tk.Label(frame_frame, text="Reading Frame:").grid(row=0, column=0, padx=5) #add label
         for i in range(1, 4): #add buttons for frames
             tk.Radiobutton(frame_frame, text=str(i), variable=self.frame_var, value=i).grid(row=0, column=i) #button label, group variable, and value when selected.
 
@@ -219,22 +219,13 @@ class Translator:     #GUI application class
 
     def validate_mrna(self, sequence):
         """Check mRNA contains only valid bases (A,U,G,C)"""
-        valid_bases = {'A', 'U', 'G', 'C'}  # Allowed nucleotides
+
+        valid_bases = {'A', 'U', 'G', 'C', 'U'}  # Allowed nucleotides
         found=set(sequence)
-        if found - valid:
-            messagebox.showerror("Invalid Input", f"Invalid characters: {', '.join(found - valid)}")
+        if found - valid_bases:
+            messagebox.showerror("Invalid Input", f"Invalid characters: {', '.join(found - valid_bases)}")
             return False
         return True
-
-    def validate_protein(self, sequence):
-         """Ensure only A, U, G, C are present."""
-        valid = {'A', 'U', 'G', 'C'}
-        found = set(sequence)
-        if found - valid:
-            messagebox.showerror("Invalid Input", f"Invalid characters: {', '.join(found - valid)}")
-            return False
-        return True
-
 
     def validate_protein(self, sequence):
         """Ensure valid amino acid symbols."""
@@ -249,7 +240,7 @@ class Translator:     #GUI application class
         """translation with error handling"""
         try:
             raw_seq = self.input_box.get("1.0", tk.END).strip().upper() #gets input sequence from text box, strips whitespace, and converts to uppercase
-            if not raw:
+            if not raw_seq:
                 messagebox.showwarning("Warning", "No input provided.")
                 return
 
@@ -259,10 +250,10 @@ class Translator:     #GUI application class
 
             if self.translation_mode.get() == "mRNA → Protein":
             # Validate mRNA sequence:
-                if not self.validate_mrna(raw):return
+                if not self.validate_mrna(raw_seq):return
                 # Apply reading frame:
                 frame = self.frame_var.get() - 1  # Convert to 0-based index
-                seq = raw[frame:]  # Slice sequence
+                seq = raw_seq[frame:]  # Slice sequence
                 # Check for incomplete codons:
                 remainder = len(seq) % 3
                 if remainder:
@@ -271,8 +262,8 @@ class Translator:     #GUI application class
                 protein = "".join([mrna_codon_table.get(seq[i:i + 3], '?') for i in range(0, len(seq), 3)])
                 self.output_box.insert(tk.END, protein)
             else:
-                if not self.validate_protein(raw): return
-                results = [f"{aa}: {', '.join(reverse_mrna_table.get(aa, ['???']))}" for aa in raw]
+                if not self.validate_protein(raw_seq): return
+                results = [f"{aa}: {', '.join(reverse_mrna_table.get(aa, ['???']))}" for aa in raw_seq]
                 self.output_box.insert(tk.END, "\n".join(results))
 
         except Exception as e:
@@ -293,7 +284,7 @@ class Translator:     #GUI application class
             except Exception as e:
                 messagebox.showerror("Error", f"Could not read file: {e}")
 
-def download_output(self):  # No parameter needed
+    def download_output(self):  # No parameter needed
         """Save translation results to file"""
         output = self.output_box.get("1.0", tk.END)
         if not output.strip():
