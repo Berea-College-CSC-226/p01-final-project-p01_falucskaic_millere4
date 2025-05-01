@@ -1,0 +1,22 @@
+🧾 CRC Card notes for Translator Class
+
+Responsibilities
+- Create and manage the main GUI window
+- Display instructions and translation options
+- Handle user input for mRNA, DNA, and protein sequences
+- Validate input sequences based on selected mode
+
+- Translate sequences:
+ mRNA → Protein
+ DNA → Protein
+ Protein → mRNA
+- Display and download translation results
+- Load sequences from FASTA files
+- Reset the interface fields
+
+
+Collaborators
+- tkinter widgets (e.g., Tk, Label, Button, OptionMenu, ScrolledText)
+- re module (for sequence cleanup)
+- Global variables: mrna_codon_table, dna_codon_table, reverse_mrna_table
+- messagebox and filedialog for user feedback and file interaction
