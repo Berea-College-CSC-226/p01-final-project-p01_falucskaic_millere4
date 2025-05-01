@@ -15,4 +15,5 @@
 # Tkinter dialogs- https://docs.python.org/3/library/dialog.html
 # Tkinter MessageBox- https://www.tutorialspoint.com/python/tk_messagebox
 #Tkinter-mainloop- https://stackoverflow.com/questions/29158220/tkinter-understanding-mainloop
-#
+#Gui/tkinter- https://www.geeksforgeeks.org/python-gui-tkinter/
+#https://realpython.com/python-gui-tkinter/
